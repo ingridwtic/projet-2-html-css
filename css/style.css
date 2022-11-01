@@ -3,7 +3,8 @@
 /*Mettons du style au header*/
 
 body{
-   margin:0;
+   margin-left:1%;
+   margin-right: 1%;
    padding:0;
 }
 
@@ -47,7 +48,6 @@ nav{
 .menu a:hover{
    border-top:3px solid #0065fc;
    color:#0065fc;
-
 }
 
 /*survol header*/
@@ -63,7 +63,6 @@ nav{
     display: flex;
     height: 50px;
     position: relative;
-
 }
 form{
      height: 30px;  
@@ -77,9 +76,7 @@ form input{
        border-bottom-left-radius: 10px;
        font-weight:bolder;
 }
-
-
-button{
+form button{
     color:white ;
     background-color:#0065fc ;
     height: 45px;
@@ -107,14 +104,14 @@ form i {
     display:flex;
     padding:10px;
 }
-.filter input{
-       height: 40px;
-       max-width: 160px;
-       padding-left: 50px; 
-       border-radius: 50px;
-       border: solid 2px #f2f2f2;
-       font-weight: bolder;
-       word-wrap: break-word;
+.filter button{
+   width: 100%;
+   border-radius: 20px;
+   padding-left: 50px;
+   height: 45px;
+   border: solid 2px #f2f2f2;
+   background-color: white;
+   font-weight: bolder;
 }
 .filter-content{
     margin: 15px;
@@ -130,6 +127,9 @@ form i {
    border-radius: 50%;
    position: absolute;
    padding-top: 15px; 
+}
+.filter-phone{
+   display: none;
 }
 /* stylons le i de plus 500 logements*/
 .icon{
@@ -150,114 +150,158 @@ align-items: center;
 }
 /* Ajoutons le media screen du header et du filtre*/
 
-@media screen and (max-width: 992px)/*pour écran ordinateur*/
+@media screen and (max-width: 767px)/*pour les iphone8*/
 {
     /* Rédigez vos propriétés CSS ici */
     .menu a:hover{
-      justify-content: flex-start;
       border-top: none;
       color: #0065fc;
       border-bottom: solid 3px #0065fc;
       padding-bottom: 0%;
     }
-    .menu a{
-      padding-top: 30%;
-    }
-    nav{
+    .menu {
+      padding-top: 15%;
+      justify-content: space-between;
       display: flex;
-      align-items: center;
-     justify-content: flex-start;
-      flex-wrap: wrap;
-      margin:0;
-   }
+      width: 100%; 
+    }
+    
     .logo{
       display: flex;
       justify-content: center; 
-      padding-left: 30%;
+      padding-left: 40%;
     }
-    nav li{
-      margin-top:25%; 
-    }
-    nav ul{
-      margin-right: 40%;
-      
-    }
+    form input{
+      border: solid 2px #f2f2f2;/*couleur des bordure*/
+      height: 50px;
+      width: 300px;
+      padding-left: 80px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      font-weight:bolder;}
+     form i {
+            display: flex;
+            position:absolute ;
+            border-radius: 10px 0 0 10px;
+            text-align:center; 
+            padding: 18px;
+            width: 15px;
+            background-color: #f2f2f2;
+            height:20px;
+            
+     }
+    #filter-container{
+      margin-left:3%;
 
+    }
     .filter{
       display: flex;
      flex-wrap: wrap;
+     margin-left: -7%;
+     margin-right: 10%;
+    }
+    .filter-phone{
+      display:flex ;
+      margin: 0;
+      padding-top: 7%;
+   
+    }
+    .filter h4{
+      display: none;
     }
     
 .fa-search{
 color:white ;
 padding: 15px;
-height: 15px;
+height: 25px;
 background-color:#0065fc ;
- width: 15px;
+ width: 20px;
  border: #f2f2f2;
  border-radius: 10px 10px 10px 10px;
 position: absolute;
-margin-left: 250px; 
+margin-left: 350px; 
 }
-button{display: none;  
+form button{display: none;  
 }
 }
-@media screen and (max-width: 768px)/*pour tablette*/
+@media screen and (width:768px)/*pour tablette*/
 {
     /* Rédigez vos propriétés CSS ici */
+    /* Rédigez vos propriétés CSS ici */
     .menu a:hover{
-      justify-content: flex-start;
       border-top: none;
       color: #0065fc;
       border-bottom: solid 3px #0065fc;
       padding-bottom: 0%;
     }
-    .menu a{
-      padding-top: 30%;
-    }
-    nav{
+    .menu {
+      padding-top: 15%;
+      justify-content: space-between;
       display: flex;
-      align-items: center;
-     justify-content: flex-start;
-      flex-wrap: wrap;
-      margin:0;
-   }
+      width: 100%; 
+    }
+    
     .logo{
       display: flex;
       justify-content: center; 
-      padding-left: 30%;
+      padding-left: 40%;
     }
-    nav li{
-      margin-top:25%; 
-    }
-    nav ul{
-      margin-right: 40%;
-      
-    }
+    form input{
+      border: solid 2px #f2f2f2;/*couleur des bordure*/
+      height: 50px;
+      width: 350px;
+      padding-left: 80px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      font-weight:bolder;}
+     form i {
+            display: flex;
+            position:absolute ;
+            border-radius: 10px 0 0 10px;
+            text-align:center; 
+            padding: 18px;
+            width: 15px;
+            background-color: #f2f2f2;
+            height:20px;
+            
+     }
+    #filter-container{
+      margin-left:3%;
 
+    }
     .filter{
       display: flex;
      flex-wrap: wrap;
+     margin-left: -7%;
+     margin-right: 10%;
+    }
+    .filter-phone{
+      display:flex ;
+      margin: 0;
+      padding-top: 7%;
+   
+    }
+    .filter h4{
+      display: none;
     }
     
 .fa-search{
 color:white ;
 padding: 15px;
-height: 15px;
+height: 25px;
 background-color:#0065fc ;
- width: 15px;
+ width: 20px;
  border: #f2f2f2;
  border-radius: 10px 10px 10px 10px;
 position: absolute;
-margin-left: 250px; 
+margin-left: 400px; 
 }
-button{display: none;  
+form button{display: none;  
 }
 }
+
 /*stylons la partie hébergement à Marseille*/
-#accommodation{
 
-}
 #accommodation p{
    font-size: 13px;
    color: black;
@@ -284,7 +328,7 @@ button{display: none;
    display: flex;
 }
 .flat img{
-width: 225px;
+width: 100%;
 height: 110px;
 border-top-left-radius: 15px;
 border-top-right-radius: 15px;
@@ -297,13 +341,13 @@ object-fit: cover;
    background-color: white;
    box-shadow:5px 5px 5px rgb(235, 232, 232);
    width: 230px;
-   height: 190px;
-   line-height: 2px;
+   height: 100%;
    margin: 2% 5% 2% 0;
    padding: 2px;
 }
 .news-flat{
    padding-left: 7%;
+  
 }
    
 .flat a{
@@ -317,6 +361,10 @@ object-fit: cover;
 .star .fa-duotone {
    color:#e6e4e4;
 }
+.flat:hover{
+   width: 300px;
+   transform: scale(1);
+   }
 
 /*stylons la partie les plus populaires*/
 .flat-content2{
@@ -349,8 +397,7 @@ object-fit: cover;
    width: 340px;
    background-color: white;
    margin-bottom: 8%;
-   margin-top: 8%;
-   
+   margin-top: 8%; 
 }
 .news-popular{
    margin-left:5%; 
@@ -365,12 +412,15 @@ object-fit: cover;
    margin-top: 18%;
    
 }
-.flat-container a img:hover{
-width: 250px;
-border-radius: 15px;
-}
 
-@media screen and (max-width: 992px)
+.popular:hover{
+   width: 400px;
+   transform:scale(1);
+}
+.flat-content2 img:hover{
+ width:200px;
+}
+@media screen and (max-width: 767px)/*pour les iphone8*/
 {
    .flat-container{
       display: flex;
@@ -378,31 +428,44 @@ border-radius: 15px;
    }
    .flat-content1{
       background-color: white;
-   }
-   .flat-content1 .section-1{
-      flex-direction: column;
-   }
-   .flat-content1 .section-2{
-      flex-direction: column;
-   }
-   .flat{
-      width: 325px;
-   }
-   .flat img{
-      width: 325px;
-   }
-   .flat-content2{ 
-      border-radius: 0;  
-      width: 100%;
-      margin-left: 0;
-      padding-left:0;
+      margin-left: 6%;
      
    }
-   .popular{
-      margin: 3%;
+   .flat-content1 .section-1{
+      flex-direction: column;
+      
+   }
+   .flat-content1 .section-2{
+      flex-direction: column;
+   }
+   .flat{
+      width: 325px;
+      justify-content:center;
+      
+   }
+   .flat img{
+      width: 325px;
+   }
+   .flat-content2{ 
+      border-radius: 0;  
+      width:auto;
+      align-items: center;
+      padding-bottom: 4%;
+      margin-right: 8%;
+   }
+   .flat:hover{
+      width: 350px;
+      transform: scale(1);
+      }
+      .flat img:hover{
+         width: 350px;
+         transform: scale(1);
+      }  
+   .icon{
+    padding-bottom: 5%;  
    }
 }
-@media screen and (max-width: 778px)
+@media screen and (width: 768px)
 {
    .flat-container{
       display: flex;
@@ -410,29 +473,39 @@ border-radius: 15px;
    }
    .flat-content1{
       background-color: white;
-      margin-left: 0;
-      padding-left:0;
+      margin-left: 6%;
+     
    }
    .flat-content1 .section-1{
       flex-direction: column;
+      
    }
    .flat-content1 .section-2{
       flex-direction: column;
    }
    .flat{
       width: 325px;
+      justify-content:center;
+      
    }
    .flat img{
       width: 325px;
    }
    .flat-content2{ 
       border-radius: 0;  
-      width: 100%;
-      margin-left: 0;
-      padding-left:0;
+      width:auto;
+      align-items: center;
    }
-   .popular{
-      margin: 3%;
+   .flat:hover{
+      width: 350px;
+      transform: scale(1);
+      }
+      .flat img:hover{
+         width: 350px;
+         transform: scale(1);
+      }  
+   .icon{
+    padding-bottom: 5%;  
    }
 }
 /*stylons les activités à Marseille*/
@@ -468,6 +541,10 @@ padding-top:2%;
    border-top-right-radius: 20px;
    object-fit: cover;
 }
+.sectionA:hover{
+   width: 500px;
+   transform:scale(1);
+}
 .sectionB{
    width: 25%;
    flex-direction: column;
@@ -488,6 +565,10 @@ padding-top:2%;
    border-top-right-radius: 20px;
    object-fit: cover;
 }
+.sectionB-fort:hover{
+   width: 400px;
+   transform:scale(1);
+}
 .sectionB-iles{
    height: 38%;
    margin-top: 2%;
@@ -503,6 +584,10 @@ padding-top:2%;
    object-fit: cover;
    object-position: 20% 20%; /*object-position est utiliser pour recadrer l'image*/
 }
+.sectionB-iles:hover{
+   width: 400px;
+   transform:scale(1)
+}
 .sectionC{
    width: 25%;
    border-radius: 20px;
@@ -516,6 +601,10 @@ padding-top:2%;
    border-top-left-radius: 20px;
    border-top-right-radius: 20px;
    object-fit: cover;
+}
+.sectionC:hover{
+   width: 500px;
+   transform:scale(1);
 }
 .sectionD{
    width: 25%;
@@ -536,6 +625,10 @@ padding-top:2%;
    border-top-right-radius: 20px;
    object-fit: cover;
 }
+.sectionD-notre:hover{
+   width: 400px;
+   transform:scale(1);
+}
 .sectionD-parc{
    height: 46%;
    margin-bottom: 2%;
@@ -551,12 +644,21 @@ padding-top:2%;
    object-fit: cover;
    box-shadow:5px 5px 5px rgb(244, 243, 243);
 }
-@media screen and (max-width: 992px)
+.sectionD-parc:hover{
+   width: 400px;
+   transform:scale(1);
+}
+@media screen and (max-width: 767px)/*pour les iphone8*/
 {
+   #activity h3{
+      margin-left: 8%;
+   }
    .activity-container{
       display: flex;
       flex-direction: column;
+      margin-left: 9%;
    }
+
    .sectionA{
       border-radius: 15px;
       width: 325px;
@@ -636,12 +738,17 @@ padding-top:2%;
                      border-top-right-radius: 15px;  
                      }
                   }
-                  @media screen and (max-width: 778px)
+                  @media screen and (width: 768px)/*pour les tablettes*/
                   {
+                     #activity h3{
+                        margin-left: 8%;
+                     }
                      .activity-container{
                         display: flex;
                         flex-direction: column;
+                        margin-left: 9%;
                      }
+                  
                      .sectionA{
                         border-radius: 15px;
                         width: 325px;
@@ -755,18 +862,20 @@ padding-top:2%;
                        margin-right: 25%;
                     }
                                    
-                    @media screen and (max-width: 768px){
+                    @media screen and (max-width: 767px)/*pour les iphone8*/
+                    {
                      #footer-contain{
                         display: flex;
                         flex-direction: column;
                         display: flex;
                         background-color: #f2f2f2;
                         padding-top:0;
-                        margin-top: 170%;
+                        margin-top: 830px;
                         margin-bottom: 0; 
-                        height: 460px; 
-                        margin-right: 0; 
+                        height: 460px;  
                         justify-content: space-around;
+                        align-items: flex-start ;
+                        padding-left: 10%;
                      }
                      #footer-contain li{
                       padding-top: 2%;
@@ -778,4 +887,52 @@ padding-top:2%;
                      
                    }  
                 }
-               
+                @media screen and (width: 768px)/*pour les smarphones*/
+                    {
+                     #footer-contain{
+                        display: flex;
+                        flex-direction: column;
+                        display: flex;
+                        background-color: #f2f2f2;
+                        padding-top:0;
+                        margin-top: 830px;
+                        margin-bottom: 0; 
+                        height: 460px;  
+                        justify-content: space-around;
+                        align-items: flex-start ;
+                        padding-left: 10%;
+                     }
+                     #footer-contain li{
+                      padding-top: 2%;
+                      
+                   
+                   }
+                   #footer-contain ul{
+                      padding-left: 0
+                     
+                   }  
+                }
+                @media screen and (max-width: 1000px)/*pour les deskop*/
+                {
+                  .flat-content2{
+                     display: flex;
+                     flex-wrap: wrap;
+                  }
+                  .flat{
+                    flex-wrap: wrap;
+                  }
+                  .news-flat{
+                     display: flex;
+                     flex-direction: column;
+                  }
+                  .news-flat h4{
+                   display: flex;
+                   flex-direction: row;
+                   flex-wrap: wrap;
+                  }
+                  .popular{
+                 display: flex;
+                 width:95%;
+                 flex-wrap: wrap;
+                  }
+                }
